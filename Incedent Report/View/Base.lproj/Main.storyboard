@@ -135,6 +135,9 @@
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="100" id="Ob9-cD-qJg"/>
                                                                         </constraints>
+                                                                        <connections>
+                                                                            <action selector="dateAndTimePicker:" destination="BYZ-38-t0r" eventType="valueChanged" id="WJE-ox-QXD"/>
+                                                                        </connections>
                                                                     </datePicker>
                                                                 </subviews>
                                                             </stackView>
@@ -154,21 +157,33 @@
                                                                                 <rect key="frame" x="0.0" y="0.0" width="141" height="34"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="given-name"/>
+                                                                                <connections>
+                                                                                    <action selector="lastNameTF:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="YdR-4c-08t"/>
+                                                                                </connections>
                                                                             </textField>
                                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bPj-Ki-o7a">
                                                                                 <rect key="frame" x="144" y="0.0" width="141" height="34"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="family-name"/>
+                                                                                <connections>
+                                                                                    <action selector="firstNameTF:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="ofi-rZ-Wa3"/>
+                                                                                </connections>
                                                                             </textField>
                                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Middle" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="r6o-Wy-Qnp">
                                                                                 <rect key="frame" x="288" y="0.0" width="141" height="34"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="additional-name"/>
+                                                                                <connections>
+                                                                                    <action selector="middleNameTF:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="hbL-bw-huv"/>
+                                                                                </connections>
                                                                             </textField>
-                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Rank" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2E3-4e-Cwk">
+                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Rank" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2E3-4e-Cwk" customClass="PickerTextField" customModule="Incedent_Report" customModuleProvider="target">
                                                                                 <rect key="frame" x="432" y="0.0" width="141" height="34"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                                                <connections>
+                                                                                    <action selector="rankTF:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="guG-Td-zdi"/>
+                                                                                </connections>
                                                                             </textField>
                                                                         </subviews>
                                                                     </stackView>
@@ -190,6 +205,9 @@
                                                                                 <rect key="frame" x="158" y="0.0" width="203.5" height="34"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <textInputTraits key="textInputTraits"/>
+                                                                                <connections>
+                                                                                    <action selector="unitTF:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="C3Z-Ha-ceh"/>
+                                                                                </connections>
                                                                             </textField>
                                                                         </subviews>
                                                                     </stackView>
@@ -205,7 +223,10 @@
                                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="555-555-5555" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="d4M-E9-y55">
                                                                                 <rect key="frame" x="158" y="0.0" width="203.5" height="34"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="phonePad" keyboardAppearance="alert" returnKeyType="next" smartDashesType="yes" smartInsertDeleteType="yes" smartQuotesType="no" textContentType="tel"/>
+                                                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="next" smartDashesType="yes" smartInsertDeleteType="yes" smartQuotesType="no" textContentType="tel"/>
+                                                                                <connections>
+                                                                                    <action selector="phoneNumberTF:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="abf-Yn-ZMG"/>
+                                                                                </connections>
                                                                             </textField>
                                                                         </subviews>
                                                                     </stackView>
@@ -227,6 +248,9 @@
                                                                                 <rect key="frame" x="158" y="0.0" width="203.5" height="34"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <textInputTraits key="textInputTraits"/>
+                                                                                <connections>
+                                                                                    <action selector="phaseOfFlightTF:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="tTq-Wl-Frd"/>
+                                                                                </connections>
                                                                             </textField>
                                                                         </subviews>
                                                                     </stackView>
@@ -243,6 +267,9 @@
                                                                                 <rect key="frame" x="158" y="0.0" width="203.5" height="34"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                                                <connections>
+                                                                                    <action selector="headingTF:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Gs9-YC-ncM"/>
+                                                                                </connections>
                                                                             </textField>
                                                                         </subviews>
                                                                     </stackView>
@@ -264,6 +291,9 @@
                                                                                 <rect key="frame" x="158" y="0.0" width="203.5" height="34"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                                                <connections>
+                                                                                    <action selector="airspeedTF:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Mby-JO-tt1"/>
+                                                                                </connections>
                                                                             </textField>
                                                                         </subviews>
                                                                     </stackView>
@@ -280,6 +310,9 @@
                                                                                 <rect key="frame" x="158" y="0.0" width="105.5" height="34"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                                                <connections>
+                                                                                    <action selector="altitudeTF:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="QC7-TN-Jhi"/>
+                                                                                </connections>
                                                                             </textField>
                                                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="l8M-02-Oct">
                                                                                 <rect key="frame" x="268.5" y="0.0" width="93" height="35"/>
@@ -287,6 +320,9 @@
                                                                                     <segment title="AGL"/>
                                                                                     <segment title="MSL"/>
                                                                                 </segments>
+                                                                                <connections>
+                                                                                    <action selector="aglMslSegment:" destination="BYZ-38-t0r" eventType="valueChanged" id="aP7-lk-kIv"/>
+                                                                                </connections>
                                                                             </segmentedControl>
                                                                         </subviews>
                                                                     </stackView>
@@ -308,6 +344,9 @@
                                                                                 <rect key="frame" x="158" y="0.0" width="203.5" height="34"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                                                                <connections>
+                                                                                    <action selector="callSignTF:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="g8U-Xy-bwZ"/>
+                                                                                </connections>
                                                                             </textField>
                                                                         </subviews>
                                                                     </stackView>
@@ -324,6 +363,9 @@
                                                                                 <rect key="frame" x="158" y="0.0" width="203.5" height="34"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <textInputTraits key="textInputTraits"/>
+                                                                                <connections>
+                                                                                    <action selector="airCraftTypeTF:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="lEz-P1-6b4"/>
+                                                                                </connections>
                                                                             </textField>
                                                                         </subviews>
                                                                     </stackView>
@@ -345,6 +387,9 @@
                                                                                 <rect key="frame" x="158" y="0.0" width="203.5" height="34"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                                                <connections>
+                                                                                    <action selector="tailNumberTF:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="izP-XE-MKE"/>
+                                                                                </connections>
                                                                             </textField>
                                                                         </subviews>
                                                                     </stackView>
@@ -361,6 +406,9 @@
                                                                                 <rect key="frame" x="158" y="0.0" width="94.5" height="34"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                                                <connections>
+                                                                                    <action selector="sortieDurationHrsTF:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="FX3-Pw-Ldz"/>
+                                                                                </connections>
                                                                             </textField>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m0I-ug-JfY">
                                                                                 <rect key="frame" x="257.5" y="0.0" width="5" height="34"/>
@@ -372,6 +420,9 @@
                                                                                 <rect key="frame" x="267.5" y="0.0" width="94" height="34"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                                                <connections>
+                                                                                    <action selector="sortieDurationDecHrsTF:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="w9V-mq-aP3"/>
+                                                                                </connections>
                                                                             </textField>
                                                                         </subviews>
                                                                         <constraints>
@@ -396,6 +447,9 @@
                                                                                 <rect key="frame" x="158" y="0.0" width="203.5" height="34"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                                                                <connections>
+                                                                                    <action selector="locationTF:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="jWC-5w-KUb"/>
+                                                                                </connections>
                                                                             </textField>
                                                                         </subviews>
                                                                     </stackView>
@@ -412,6 +466,9 @@
                                                                                 <rect key="frame" x="158" y="0.0" width="203.5" height="34"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                                <connections>
+                                                                                    <action selector="non9RWTF:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="wsJ-AN-FMX"/>
+                                                                                </connections>
                                                                             </textField>
                                                                         </subviews>
                                                                     </stackView>
@@ -442,7 +499,7 @@
                                                                                                         <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
                                                                                                         <color key="onTintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                                         <connections>
-                                                                                                            <action selector="sect_1_Electrical:" destination="BYZ-38-t0r" eventType="valueChanged" id="3Zz-sz-A2e"/>
+                                                                                                            <action selector="systemELECTRICALswitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="6M6-bs-N9d"/>
                                                                                                         </connections>
                                                                                                     </switch>
                                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Electrical" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gs5-0i-Hy5">
@@ -459,7 +516,7 @@
                                                                                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="UbU-Jj-mbg">
                                                                                                         <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
                                                                                                         <connections>
-                                                                                                            <action selector="sect_1_Engine:" destination="BYZ-38-t0r" eventType="valueChanged" id="SRo-MJ-ASt"/>
+                                                                                                            <action selector="systemENGINEswitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="Oq4-cI-Wqx"/>
                                                                                                         </connections>
                                                                                                     </switch>
                                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Engine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ixF-vE-PZl">
@@ -476,7 +533,7 @@
                                                                                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Pvw-kw-XkX">
                                                                                                         <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
                                                                                                         <connections>
-                                                                                                            <action selector="sect_1_Enviro:" destination="BYZ-38-t0r" eventType="valueChanged" id="jpD-YD-snC"/>
+                                                                                                            <action selector="systemENVIROswitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="LWc-GP-S7Y"/>
                                                                                                         </connections>
                                                                                                     </switch>
                                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enviro/Pressure" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aPr-Nx-RAW">
@@ -498,7 +555,7 @@
                                                                                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="iMR-Nd-Qk0">
                                                                                                         <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
                                                                                                         <connections>
-                                                                                                            <action selector="sect_1_FlightControls:" destination="BYZ-38-t0r" eventType="valueChanged" id="WnA-V1-6e8"/>
+                                                                                                            <action selector="systemFLIGHTCONTROLSswitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="Hgv-OR-H4W"/>
                                                                                                         </connections>
                                                                                                     </switch>
                                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flight Controls" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o5u-N4-2SR">
@@ -515,7 +572,7 @@
                                                                                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2Bq-fE-UOd">
                                                                                                         <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
                                                                                                         <connections>
-                                                                                                            <action selector="sect_1_Fuel:" destination="BYZ-38-t0r" eventType="valueChanged" id="rVi-B4-RpB"/>
+                                                                                                            <action selector="systemFUELswitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="59c-QB-BSs"/>
                                                                                                         </connections>
                                                                                                     </switch>
                                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fuel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kVX-W9-dlk">
@@ -532,7 +589,7 @@
                                                                                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gLa-nc-yXK">
                                                                                                         <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
                                                                                                         <connections>
-                                                                                                            <action selector="sect_1_Gear:" destination="BYZ-38-t0r" eventType="valueChanged" id="Tal-oR-nlH"/>
+                                                                                                            <action selector="systemGEARswitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="GKi-Dw-tQO"/>
                                                                                                         </connections>
                                                                                                     </switch>
                                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gear/Brakes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQt-xG-mFn">
@@ -554,7 +611,7 @@
                                                                                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hDi-Ea-aSa">
                                                                                                         <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
                                                                                                         <connections>
-                                                                                                            <action selector="sect_1_Hydro:" destination="BYZ-38-t0r" eventType="valueChanged" id="w8C-zM-LGv"/>
+                                                                                                            <action selector="systemHYDRAULICswitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="8PM-e4-e6b"/>
                                                                                                         </connections>
                                                                                                     </switch>
                                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hydraulic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yd6-K9-qO2">
@@ -571,7 +628,7 @@
                                                                                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="iEK-wv-97c">
                                                                                                         <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
                                                                                                         <connections>
-                                                                                                            <action selector="sect_1_Instrument:" destination="BYZ-38-t0r" eventType="valueChanged" id="Huz-J8-kTq"/>
+                                                                                                            <action selector="systemINSTRUMENTATIONswitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="2Ge-13-nea"/>
                                                                                                         </connections>
                                                                                                     </switch>
                                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instrumentation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cG8-HA-kk9">
@@ -588,7 +645,7 @@
                                                                                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xlX-ms-r3T">
                                                                                                         <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
                                                                                                         <connections>
-                                                                                                            <action selector="sect_1_Payload:" destination="BYZ-38-t0r" eventType="valueChanged" id="lcM-oQ-PsF"/>
+                                                                                                            <action selector="systemPAYLOADswitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="GlE-JL-bbO"/>
                                                                                                         </connections>
                                                                                                     </switch>
                                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payload" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8TB-Mh-KP6">
@@ -616,6 +673,9 @@
                                                                                         <rect key="frame" x="54" y="0.0" width="640" height="34"/>
                                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                                        <connections>
+                                                                                            <action selector="section1OtherTF:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="u1R-zW-K0V"/>
+                                                                                        </connections>
                                                                                     </textField>
                                                                                 </subviews>
                                                                             </stackView>
@@ -709,6 +769,9 @@
                                                                                 <rect key="frame" x="158" y="0.0" width="203.5" height="34"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <textInputTraits key="textInputTraits"/>
+                                                                                <connections>
+                                                                                    <action selector="lightingConditionsTF:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="5ar-sC-HGr"/>
+                                                                                </connections>
                                                                             </textField>
                                                                         </subviews>
                                                                     </stackView>
@@ -725,6 +788,9 @@
                                                                                 <rect key="frame" x="158" y="0.0" width="203.5" height="34"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <textInputTraits key="textInputTraits"/>
+                                                                                <connections>
+                                                                                    <action selector="icingConditionsTF:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="onN-g9-dHc"/>
+                                                                                </connections>
                                                                             </textField>
                                                                         </subviews>
                                                                     </stackView>
@@ -746,6 +812,9 @@
                                                                                 <rect key="frame" x="158" y="0.0" width="203.5" height="34"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <textInputTraits key="textInputTraits"/>
+                                                                                <connections>
+                                                                                    <action selector="turbulanceTF:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Mgd-y8-iaY"/>
+                                                                                </connections>
                                                                             </textField>
                                                                         </subviews>
                                                                     </stackView>
@@ -762,6 +831,9 @@
                                                                                 <rect key="frame" x="158" y="0.0" width="203.5" height="34"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                                                <connections>
+                                                                                    <action selector="windsTF:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="kFk-wm-MXC"/>
+                                                                                </connections>
                                                                             </textField>
                                                                         </subviews>
                                                                     </stackView>
@@ -783,6 +855,9 @@
                                                                                 <rect key="frame" x="158" y="0.0" width="203.5" height="34"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <textInputTraits key="textInputTraits"/>
+                                                                                <connections>
+                                                                                    <action selector="visibilityTF:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="IxE-YD-xm4"/>
+                                                                                </connections>
                                                                             </textField>
                                                                         </subviews>
                                                                     </stackView>
@@ -838,52 +913,58 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="08Y-cw-ljX" userLabel="Section_3">
-                                                <rect key="frame" x="-0.5" y="1015.5" width="769.5" height="340"/>
+                                                <rect key="frame" x="-0.5" y="1015.5" width="769.5" height="500"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cEw-SG-Gsm">
-                                                        <rect key="frame" x="19" y="16" width="731" height="308"/>
+                                                        <rect key="frame" x="19" y="39" width="731" height="422"/>
                                                         <subviews>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="wDH-8R-7ph">
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="fHy-2O-JpT">
                                                                 <rect key="frame" x="0.0" y="0.0" width="731" height="34"/>
                                                                 <subviews>
-                                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="J8k-wu-C6d" userLabel="Location">
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hRf-eB-xhz" userLabel="birdConStep">
                                                                         <rect key="frame" x="0.0" y="0.0" width="361.5" height="34"/>
                                                                         <subviews>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bird Watch Condition:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uda-9l-pHo">
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bird Con @ Step:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HwT-qD-Gol">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="153" height="34"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MODERATE" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="93Y-mV-hNg" customClass="PickerTextField" customModule="Incedent_Report" customModuleProvider="target">
+                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MODERATE" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AM6-C6-1aD" customClass="PickerTextField" customModule="Incedent_Report" customModuleProvider="target">
                                                                                 <rect key="frame" x="158" y="0.0" width="203.5" height="34"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <textInputTraits key="textInputTraits"/>
+                                                                                <connections>
+                                                                                    <action selector="birdWatchConditionTF:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="bTY-9R-27h"/>
+                                                                                </connections>
                                                                             </textField>
                                                                         </subviews>
                                                                     </stackView>
-                                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="uOK-tZ-vdi" userLabel="Non 9 RW Aircrew">
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="S1s-j4-8bh" userLabel="birdConIncedent">
                                                                         <rect key="frame" x="369.5" y="0.0" width="361.5" height="34"/>
                                                                         <subviews>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Birds:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyy-9k-Atx">
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bird Con @ Incedent:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AG0-Ly-smJ">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="153" height="34"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="UNKNOWN" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ClS-A4-Yb1" customClass="PickerTextField" customModule="Incedent_Report" customModuleProvider="target">
+                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MODERATE" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mud-yf-m81" customClass="PickerTextField" customModule="Incedent_Report" customModuleProvider="target">
                                                                                 <rect key="frame" x="158" y="0.0" width="203.5" height="34"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <textInputTraits key="textInputTraits"/>
+                                                                                <connections>
+                                                                                    <action selector="numberOfBirdsTF:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="vuW-nD-e5s"/>
+                                                                                </connections>
                                                                             </textField>
                                                                         </subviews>
                                                                     </stackView>
                                                                 </subviews>
                                                             </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="XQR-Q7-ITo">
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="wDH-8R-7ph">
                                                                 <rect key="frame" x="0.0" y="44" width="731" height="34"/>
                                                                 <subviews>
-                                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="GH2-Ls-dXL" userLabel="Location">
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="GH2-Ls-dXL" userLabel="wildLifeSize">
                                                                         <rect key="frame" x="0.0" y="0.0" width="361.5" height="34"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wildlife Size:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Abe-a8-klP">
@@ -896,11 +977,38 @@
                                                                                 <rect key="frame" x="158" y="0.0" width="203.5" height="34"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <textInputTraits key="textInputTraits"/>
+                                                                                <connections>
+                                                                                    <action selector="wildLifeSizeTF:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Oqa-wP-mZO"/>
+                                                                                </connections>
                                                                             </textField>
                                                                         </subviews>
                                                                     </stackView>
-                                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="x32-e1-oRp" userLabel="Non 9 RW Aircrew">
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="uOK-tZ-vdi" userLabel="numOfBirds">
                                                                         <rect key="frame" x="369.5" y="0.0" width="361.5" height="34"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Birds:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyy-9k-Atx">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="153" height="34"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="UNKNOWN" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ClS-A4-Yb1" customClass="PickerTextField" customModule="Incedent_Report" customModuleProvider="target">
+                                                                                <rect key="frame" x="158" y="0.0" width="203.5" height="34"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                                <connections>
+                                                                                    <action selector="numberOfBirdsTF:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="y7t-xb-BiL"/>
+                                                                                </connections>
+                                                                            </textField>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="XQR-Q7-ITo">
+                                                                <rect key="frame" x="0.0" y="88" width="731" height="34"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="x32-e1-oRp" userLabel="impactPoints">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="361.5" height="34"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Impact Points:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfF-jC-fWF">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="153" height="34"/>
@@ -912,16 +1020,36 @@
                                                                                 <rect key="frame" x="158" y="0.0" width="203.5" height="34"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <textInputTraits key="textInputTraits"/>
+                                                                                <connections>
+                                                                                    <action selector="impactPointsTF:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="sPi-V5-Ggu"/>
+                                                                                </connections>
                                                                             </textField>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="J8k-wu-C6d" userLabel="blank">
+                                                                        <rect key="frame" x="369.5" y="0.0" width="361.5" height="34"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uda-9l-pHo">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="153" height="34"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pph-BJ-qLL">
+                                                                                <rect key="frame" x="158" y="0.0" width="203.5" height="34"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
                                                                         </subviews>
                                                                     </stackView>
                                                                 </subviews>
                                                             </stackView>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vKT-hk-epZ" userLabel="Systems">
-                                                                <rect key="frame" x="0.0" y="88" width="731" height="180"/>
+                                                                <rect key="frame" x="0.0" y="132" width="731" height="250"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bOH-q5-2YE">
-                                                                        <rect key="frame" x="18.5" y="8.5" width="694" height="163.5"/>
+                                                                        <rect key="frame" x="18.5" y="18" width="694" height="214.5"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check All That Apply:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AZ0-wV-XJh">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="694" height="20.5"/>
@@ -930,16 +1058,34 @@
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="AVQ-ZX-WZT">
-                                                                                <rect key="frame" x="0.0" y="30.5" width="694" height="133"/>
+                                                                                <rect key="frame" x="0.0" y="30.5" width="694" height="184"/>
                                                                                 <subviews>
+                                                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Mq3-xe-eDr" userLabel="Electrical">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="309" height="31"/>
+                                                                                        <subviews>
+                                                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wF4-r8-uuZ">
+                                                                                                <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                                                                <color key="onTintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                                <connections>
+                                                                                                    <action selector="birdManswitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="f1K-Ai-E9c"/>
+                                                                                                </connections>
+                                                                                            </switch>
+                                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BIRDMAN PERFORMING DUTIES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N5o-oC-AgR">
+                                                                                                <rect key="frame" x="59" y="0.0" width="250" height="31"/>
+                                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                                <nil key="textColor"/>
+                                                                                                <nil key="highlightedColor"/>
+                                                                                            </label>
+                                                                                        </subviews>
+                                                                                    </stackView>
                                                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3uY-SK-6Jf" userLabel="Electrical">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="694" height="31"/>
+                                                                                        <rect key="frame" x="0.0" y="51" width="694" height="31"/>
                                                                                         <subviews>
                                                                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="81P-pl-g0M">
                                                                                                 <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
                                                                                                 <color key="onTintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                                 <connections>
-                                                                                                    <action selector="sect_3_sof:" destination="BYZ-38-t0r" eventType="valueChanged" id="wDi-E1-bl2"/>
+                                                                                                    <action selector="sofAtcswitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="aO5-mf-wES"/>
                                                                                                 </connections>
                                                                                             </switch>
                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SOF/ATC WARNING OF BIRD HAZARD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytP-lc-gi1">
@@ -951,12 +1097,12 @@
                                                                                         </subviews>
                                                                                     </stackView>
                                                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="L5K-OZ-sLR" userLabel="Electrical">
-                                                                                        <rect key="frame" x="0.0" y="51" width="694" height="31"/>
+                                                                                        <rect key="frame" x="0.0" y="102" width="694" height="31"/>
                                                                                         <subviews>
                                                                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="mCP-Ue-3pg">
                                                                                                 <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
                                                                                                 <connections>
-                                                                                                    <action selector="sect_3_aircraftLandingLight:" destination="BYZ-38-t0r" eventType="valueChanged" id="YQP-PE-Wiu"/>
+                                                                                                    <action selector="acLandingLightswitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="MBG-ri-ARM"/>
                                                                                                 </connections>
                                                                                             </switch>
                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AIRCRAFT LANDING LIGHT ON" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TE4-rA-j0w">
@@ -968,12 +1114,12 @@
                                                                                         </subviews>
                                                                                     </stackView>
                                                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="OoV-0n-Oif" userLabel="Electrical">
-                                                                                        <rect key="frame" x="0.0" y="102" width="694" height="31"/>
+                                                                                        <rect key="frame" x="0.0" y="153" width="694" height="31"/>
                                                                                         <subviews>
                                                                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="smU-cX-Jl7">
                                                                                                 <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
                                                                                                 <connections>
-                                                                                                    <action selector="sect_3_pilotWarning:" destination="BYZ-38-t0r" eventType="valueChanged" id="TvZ-2z-bq8"/>
+                                                                                                    <action selector="pilotWarningswitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="L6n-Bd-2zU"/>
                                                                                                 </connections>
                                                                                             </switch>
                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PILOT WARNING PRIOR TO IMPACT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8uy-Ms-nZr">
@@ -1002,11 +1148,11 @@
                                                                     <constraint firstItem="bOH-q5-2YE" firstAttribute="width" secondItem="vKT-hk-epZ" secondAttribute="width" multiplier="0.95" id="8zg-GQ-MN0"/>
                                                                     <constraint firstItem="bOH-q5-2YE" firstAttribute="centerX" secondItem="vKT-hk-epZ" secondAttribute="centerX" id="iQP-yL-5xa"/>
                                                                     <constraint firstItem="bOH-q5-2YE" firstAttribute="centerY" secondItem="vKT-hk-epZ" secondAttribute="centerY" id="lDv-yH-1j7"/>
-                                                                    <constraint firstAttribute="height" constant="180" id="xwf-lj-PMn"/>
+                                                                    <constraint firstAttribute="height" constant="250" id="xwf-lj-PMn"/>
                                                                 </constraints>
                                                             </view>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4l9-Z0-97r">
-                                                                <rect key="frame" x="0.0" y="278" width="731" height="30"/>
+                                                                <rect key="frame" x="0.0" y="392" width="731" height="30"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yge-rb-71Y">
                                                                         <rect key="frame" x="0.0" y="0.0" width="571" height="30"/>
@@ -1033,18 +1179,18 @@
                                                 <constraints>
                                                     <constraint firstItem="cEw-SG-Gsm" firstAttribute="width" secondItem="08Y-cw-ljX" secondAttribute="width" multiplier="0.95" id="2Au-pO-Ag5"/>
                                                     <constraint firstItem="cEw-SG-Gsm" firstAttribute="centerY" secondItem="08Y-cw-ljX" secondAttribute="centerY" id="XwE-Zv-kPM"/>
-                                                    <constraint firstAttribute="height" constant="340" id="e4o-cs-rnA"/>
+                                                    <constraint firstAttribute="height" constant="500" id="e4o-cs-rnA"/>
                                                     <constraint firstItem="cEw-SG-Gsm" firstAttribute="centerX" secondItem="08Y-cw-ljX" secondAttribute="centerX" id="tXE-Kk-jqo"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SECTION IV.  NARRATIVE COMMENTS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3mU-du-jqk">
-                                                <rect key="frame" x="-0.5" y="1375.5" width="769.5" height="20.5"/>
+                                                <rect key="frame" x="-0.5" y="1535.5" width="769.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RPD-6G-YbY" userLabel="Section_4">
-                                                <rect key="frame" x="-0.5" y="1404" width="769.5" height="220"/>
+                                                <rect key="frame" x="-0.5" y="1564" width="769.5" height="220"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ylC-qE-7F5">
                                                         <rect key="frame" x="19" y="22" width="731" height="176"/>
@@ -1102,7 +1248,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cq9-aw-ifm" userLabel="Section_5">
-                                                <rect key="frame" x="-0.5" y="1672.5" width="769.5" height="324"/>
+                                                <rect key="frame" x="-0.5" y="1832.5" width="769.5" height="324"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ofq-5y-Qyf">
                                                         <rect key="frame" x="19" y="8" width="731" height="308"/>
@@ -1160,9 +1306,6 @@
                                                                                 <rect key="frame" x="102.5" y="0.0" width="259" height="34"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <textInputTraits key="textInputTraits"/>
-                                                                                <connections>
-                                                                                    <action selector="test:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="dqj-CT-6iW"/>
-                                                                                </connections>
                                                                             </textField>
                                                                         </subviews>
                                                                     </stackView>
@@ -1302,7 +1445,7 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nTq-h9-Jma">
-                                                <rect key="frame" x="-0.5" y="2016.5" width="769.5" height="50"/>
+                                                <rect key="frame" x="-0.5" y="2176.5" width="769.5" height="50"/>
                                                 <color key="backgroundColor" red="0.19239087760000001" green="0.22936195819999999" blue="0.28690117389999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="KdP-8I-SXG"/>
@@ -1314,12 +1457,19 @@
                                                     <action selector="submitFormButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OAq-w7-WEH"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SECTION III.  MISCELLANEOUS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1f4-rF-Gt7">
-                                                <rect key="frame" x="-0.5" y="1644" width="769.5" height="20.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SECTION V.  MISCELLANEOUS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1f4-rF-Gt7">
+                                                <rect key="frame" x="-0.5" y="1804" width="769.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mvh-yB-lU8">
+                                                <rect key="frame" x="-0.5" y="2234" width="769.5" height="128"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="128" id="hy7-MO-hrG"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
@@ -1334,31 +1484,35 @@
                                             <constraint firstItem="08Y-cw-ljX" firstAttribute="top" secondItem="KU7-UQ-5EI" secondAttribute="bottom" constant="8" id="AgE-ff-Rwd"/>
                                             <constraint firstItem="nTq-h9-Jma" firstAttribute="width" secondItem="cq9-aw-ifm" secondAttribute="width" id="BZN-kg-FdY"/>
                                             <constraint firstItem="RPD-6G-YbY" firstAttribute="centerX" secondItem="3mU-du-jqk" secondAttribute="centerX" id="EiT-hL-SlT"/>
-                                            <constraint firstItem="tfF-jC-fWF" firstAttribute="width" secondItem="Tsb-zb-ouK" secondAttribute="width" id="FAB-fW-SWz"/>
                                             <constraint firstItem="cq9-aw-ifm" firstAttribute="top" secondItem="1f4-rF-Gt7" secondAttribute="bottom" constant="8" id="Frf-8F-J9P"/>
                                             <constraint firstItem="ShU-F3-Fky" firstAttribute="width" secondItem="Tsb-zb-ouK" secondAttribute="width" id="J1Z-s6-UZR"/>
                                             <constraint firstAttribute="height" constant="2500" id="KPE-Rt-OJ4"/>
+                                            <constraint firstItem="mvh-yB-lU8" firstAttribute="top" secondItem="cq9-aw-ifm" secondAttribute="bottom" constant="77.5" id="LsZ-PW-31l"/>
+                                            <constraint firstItem="AG0-Ly-smJ" firstAttribute="width" secondItem="Tsb-zb-ouK" secondAttribute="width" id="M3m-90-ysB"/>
                                             <constraint firstItem="ePo-5k-bwi" firstAttribute="top" secondItem="9em-QG-BBz" secondAttribute="top" constant="20" id="Mwj-Ld-p2r"/>
+                                            <constraint firstItem="gyy-9k-Atx" firstAttribute="width" secondItem="Tsb-zb-ouK" secondAttribute="width" id="NFA-ja-Fxc"/>
                                             <constraint firstItem="SeO-vC-E8n" firstAttribute="width" secondItem="W72-ZY-URB" secondAttribute="width" id="Nmo-TG-bHD"/>
+                                            <constraint firstItem="mvh-yB-lU8" firstAttribute="width" secondItem="cq9-aw-ifm" secondAttribute="width" id="OwG-Wn-mgq"/>
+                                            <constraint firstItem="mvh-yB-lU8" firstAttribute="centerX" secondItem="cq9-aw-ifm" secondAttribute="centerX" id="P3h-Vh-c6M"/>
                                             <constraint firstItem="6UJ-rJ-vUr" firstAttribute="width" secondItem="Tsb-zb-ouK" secondAttribute="width" id="QAV-xS-PxY"/>
                                             <constraint firstItem="qSS-L7-GSz" firstAttribute="width" secondItem="ePo-5k-bwi" secondAttribute="width" id="SYz-Me-eg7"/>
                                             <constraint firstItem="fLE-Q7-zqk" firstAttribute="width" secondItem="Tsb-zb-ouK" secondAttribute="width" id="TJc-ky-EMA"/>
                                             <constraint firstItem="DiM-Eb-g3s" firstAttribute="top" secondItem="OA1-FD-cd7" secondAttribute="bottom" constant="8" id="UEm-Sg-bKi"/>
+                                            <constraint firstItem="Abe-a8-klP" firstAttribute="width" secondItem="Tsb-zb-ouK" secondAttribute="width" id="UMs-8R-39F"/>
                                             <constraint firstItem="ePo-5k-bwi" firstAttribute="width" secondItem="9em-QG-BBz" secondAttribute="width" id="UW3-sC-kLu"/>
                                             <constraint firstItem="cq9-aw-ifm" firstAttribute="width" secondItem="1f4-rF-Gt7" secondAttribute="width" id="VZp-fU-2Zj"/>
                                             <constraint firstItem="3mU-du-jqk" firstAttribute="top" secondItem="08Y-cw-ljX" secondAttribute="bottom" constant="20" id="WRx-Ue-nqm"/>
+                                            <constraint firstItem="tfF-jC-fWF" firstAttribute="width" secondItem="Tsb-zb-ouK" secondAttribute="width" id="XRH-cy-JsJ"/>
                                             <constraint firstItem="1f4-rF-Gt7" firstAttribute="centerX" secondItem="RPD-6G-YbY" secondAttribute="centerX" id="XZd-2D-McE"/>
                                             <constraint firstItem="08Y-cw-ljX" firstAttribute="width" secondItem="KU7-UQ-5EI" secondAttribute="width" id="XuM-ma-aMd"/>
                                             <constraint firstItem="KU7-UQ-5EI" firstAttribute="top" secondItem="DiM-Eb-g3s" secondAttribute="bottom" constant="20" id="YPW-cA-DbZ"/>
                                             <constraint firstItem="3mU-du-jqk" firstAttribute="centerX" secondItem="08Y-cw-ljX" secondAttribute="centerX" id="a64-pV-Cui"/>
                                             <constraint firstItem="KU7-UQ-5EI" firstAttribute="width" secondItem="DiM-Eb-g3s" secondAttribute="width" id="aif-iz-BHw"/>
-                                            <constraint firstItem="gyy-9k-Atx" firstAttribute="width" secondItem="Tsb-zb-ouK" secondAttribute="width" id="dFt-uQ-dz1"/>
-                                            <constraint firstItem="uda-9l-pHo" firstAttribute="width" secondItem="Tsb-zb-ouK" secondAttribute="width" id="dfO-GH-d5m"/>
+                                            <constraint firstItem="uda-9l-pHo" firstAttribute="width" secondItem="Tsb-zb-ouK" secondAttribute="width" id="b6j-Vy-Btw"/>
                                             <constraint firstItem="KU7-UQ-5EI" firstAttribute="centerX" secondItem="08Y-cw-ljX" secondAttribute="centerX" id="el2-CH-Aap"/>
                                             <constraint firstItem="OA1-FD-cd7" firstAttribute="centerX" secondItem="DiM-Eb-g3s" secondAttribute="centerX" id="fcv-kj-HY7"/>
                                             <constraint firstItem="NH4-IZ-37I" firstAttribute="width" secondItem="W72-ZY-URB" secondAttribute="width" id="frl-FX-uIw"/>
                                             <constraint firstItem="OA1-FD-cd7" firstAttribute="top" secondItem="qSS-L7-GSz" secondAttribute="bottom" constant="20" id="gBl-3v-cWH"/>
-                                            <constraint firstItem="Abe-a8-klP" firstAttribute="width" secondItem="Tsb-zb-ouK" secondAttribute="width" id="gOl-Yw-liS"/>
                                             <constraint firstItem="qSS-L7-GSz" firstAttribute="centerX" secondItem="ePo-5k-bwi" secondAttribute="centerX" id="gQ8-XH-1or"/>
                                             <constraint firstItem="RPD-6G-YbY" firstAttribute="top" secondItem="3mU-du-jqk" secondAttribute="bottom" constant="8" id="iWE-Sz-Aba"/>
                                             <constraint firstItem="ePo-5k-bwi" firstAttribute="centerX" secondItem="9em-QG-BBz" secondAttribute="centerX" id="kBN-TQ-9Pl"/>
@@ -1367,6 +1521,7 @@
                                             <constraint firstItem="nTq-h9-Jma" firstAttribute="centerX" secondItem="cq9-aw-ifm" secondAttribute="centerX" id="ngN-VT-BAB"/>
                                             <constraint firstItem="1OF-RM-lmy" firstAttribute="width" secondItem="W72-ZY-URB" secondAttribute="width" id="o1x-UC-qge"/>
                                             <constraint firstItem="qSS-L7-GSz" firstAttribute="top" secondItem="ePo-5k-bwi" secondAttribute="bottom" constant="8" id="pzx-cR-2Nv"/>
+                                            <constraint firstItem="HwT-qD-Gol" firstAttribute="width" secondItem="Tsb-zb-ouK" secondAttribute="width" id="sou-Wo-912"/>
                                             <constraint firstItem="DiM-Eb-g3s" firstAttribute="width" secondItem="OA1-FD-cd7" secondAttribute="width" id="utD-MW-zDM"/>
                                             <constraint firstItem="3mU-du-jqk" firstAttribute="width" secondItem="08Y-cw-ljX" secondAttribute="width" id="wWz-ZM-dtn"/>
                                             <constraint firstItem="OA1-FD-cd7" firstAttribute="width" secondItem="qSS-L7-GSz" secondAttribute="width" id="y4Q-90-d13"/>
@@ -1402,21 +1557,25 @@
                     </view>
                     <size key="freeformSize" width="810" height="2500"/>
                     <connections>
+                        <outlet property="aglMslSegmentControl" destination="l8M-02-Oct" id="Ol8-Ck-VbQ"/>
                         <outlet property="aircraftImpactPts" destination="Lgq-rI-6fg" id="tTy-JW-691"/>
                         <outlet property="aircraftTypeDropdown" destination="Gxc-mE-FTR" id="10M-RS-kQx"/>
                         <outlet property="airspeed" destination="caP-8a-WVk" id="FVV-HL-Ts5"/>
                         <outlet property="altitude" destination="ye2-a5-gzG" id="Vay-ZD-xxF"/>
-                        <outlet property="birdWatchDropdown" destination="93Y-mV-hNg" id="1O6-SU-Ung"/>
+                        <outlet property="birdConIncedentDropdown" destination="mud-yf-m81" id="0vD-Q3-age"/>
+                        <outlet property="birdConStepDropdown" destination="AM6-C6-1aD" id="RoT-CQ-ztH"/>
                         <outlet property="callSign" destination="Qmp-cF-0Ua" id="5Rc-IZ-Oqv"/>
                         <outlet property="clearFormOutlet" destination="Kti-EM-SLv" id="Bha-6M-S8N"/>
                         <outlet property="clearSect_1Outlet" destination="W72-ZY-URB" id="Xh8-uT-jyx"/>
                         <outlet property="clearSect_2Outlet" destination="0QU-eK-SUo" id="ST7-SM-QQw"/>
                         <outlet property="clearSect_3Outlet" destination="1OF-RM-lmy" id="1bH-rx-3Pn"/>
                         <outlet property="clearSect_4Outlet" destination="SeO-vC-E8n" id="nGc-tx-NVi"/>
+                        <outlet property="dateAndTimePickerOutlet" destination="i0G-OB-KZ7" id="Zm6-Tr-CCz"/>
                         <outlet property="datePickerView" destination="i0G-OB-KZ7" id="Cmk-WX-EL9"/>
                         <outlet property="firstName" destination="bPj-Ki-o7a" id="8PY-Fb-7f8"/>
                         <outlet property="heading" destination="J0d-IH-BdV" id="Tqw-EP-n5Q"/>
                         <outlet property="icingDropdown" destination="H49-Fj-Mqq" id="WOM-eR-zfa"/>
+                        <outlet property="incedentDescriptionTextBoxOutlet" destination="Ss6-7Q-o5T" id="aDp-XJ-59d"/>
                         <outlet property="lastName" destination="Omu-3K-015" id="MOZ-wa-APH"/>
                         <outlet property="leftIconImage" destination="K0U-n5-LVr" id="8db-bY-KYI"/>
                         <outlet property="lightingDropdown" destination="XE8-iZ-7j9" id="c2q-j1-9Fz"/>
@@ -1429,7 +1588,7 @@
                         <outlet property="numberOfBirdsDropdown" destination="ClS-A4-Yb1" id="8h7-1V-kKb"/>
                         <outlet property="phaseOfFlightDropdown" destination="v0G-DV-Tkc" id="jz0-zN-sIJ"/>
                         <outlet property="phoneNumber" destination="d4M-E9-y55" id="13H-zC-gQx"/>
-                        <outlet property="rank" destination="2E3-4e-Cwk" id="aSY-g3-Zvm"/>
+                        <outlet property="rankDropDown" destination="2E3-4e-Cwk" id="aSY-g3-Zvm"/>
                         <outlet property="rigthIconImage" destination="5d3-Kr-Xdu" id="Mc9-kt-E0a"/>
                         <outlet property="scrollViewMain" destination="wmn-W4-WVA" id="gaH-2a-tJd"/>
                         <outlet property="sect1_electrical" destination="osP-Kf-PvP" id="RZs-KQ-MeV"/>
@@ -1442,6 +1601,7 @@
                         <outlet property="sect1_instrument" destination="iEK-wv-97c" id="Vbp-ck-RaM"/>
                         <outlet property="sect1_payload" destination="xlX-ms-r3T" id="UlX-hW-TuL"/>
                         <outlet property="sect3_aircraftLandingLight" destination="mCP-Ue-3pg" id="EFu-Ob-v6A"/>
+                        <outlet property="sect3_birdMan" destination="wF4-r8-uuZ" id="ywg-vu-fcT"/>
                         <outlet property="sect3_pilotWarning" destination="smU-cX-Jl7" id="Sic-im-gzf"/>
                         <outlet property="sect3_sof" destination="81P-pl-g0M" id="2R8-tP-CSk"/>
                         <outlet property="sect_1_Other" destination="7fe-1i-VwM" id="n7B-7s-gWp"/>
@@ -1469,51 +1629,46 @@
                         <outletCollection property="fieldLabels" destination="IME-5C-q7a" collectionClass="NSMutableArray" id="NR3-VA-q5C"/>
                         <outletCollection property="fieldLabels" destination="ZEW-EP-YP2" collectionClass="NSMutableArray" id="OKy-k4-Z0R"/>
                         <outletCollection property="fieldLabels" destination="dyr-JS-YF4" collectionClass="NSMutableArray" id="fef-3H-pMk"/>
-                        <outletCollection property="section1TextFields" destination="Omu-3K-015" collectionClass="NSMutableArray" id="QGx-3M-msu"/>
-                        <outletCollection property="section1TextFields" destination="bPj-Ki-o7a" collectionClass="NSMutableArray" id="f3o-Dg-gz7"/>
-                        <outletCollection property="section1TextFields" destination="r6o-Wy-Qnp" collectionClass="NSMutableArray" id="kMr-xT-TqK"/>
-                        <outletCollection property="section1TextFields" destination="2E3-4e-Cwk" collectionClass="NSMutableArray" id="qvJ-Zc-iYM"/>
-                        <outletCollection property="section1TextFields" destination="1fZ-nD-vfM" collectionClass="NSMutableArray" id="nSM-kv-nO6"/>
-                        <outletCollection property="section1TextFields" destination="d4M-E9-y55" collectionClass="NSMutableArray" id="t7t-1E-G7w"/>
-                        <outletCollection property="section1TextFields" destination="v0G-DV-Tkc" collectionClass="NSMutableArray" id="TGB-02-Xlk"/>
-                        <outletCollection property="section1TextFields" destination="J0d-IH-BdV" collectionClass="NSMutableArray" id="j07-ou-dhd"/>
-                        <outletCollection property="section1TextFields" destination="caP-8a-WVk" collectionClass="NSMutableArray" id="Tey-VW-q7Z"/>
-                        <outletCollection property="section1TextFields" destination="ye2-a5-gzG" collectionClass="NSMutableArray" id="o44-OE-Ycs"/>
-                        <outletCollection property="section1TextFields" destination="Qmp-cF-0Ua" collectionClass="NSMutableArray" id="Vft-Et-DP7"/>
-                        <outletCollection property="section1TextFields" destination="Gxc-mE-FTR" collectionClass="NSMutableArray" id="cwf-ce-AlT"/>
-                        <outletCollection property="section1TextFields" destination="Wr8-P1-dHa" collectionClass="NSMutableArray" id="hQf-II-K5s"/>
-                        <outletCollection property="section1TextFields" destination="RwT-py-n6N" collectionClass="NSMutableArray" id="O6n-R7-VTC"/>
-                        <outletCollection property="section1TextFields" destination="s9y-wk-fSc" collectionClass="NSMutableArray" id="Rd9-ji-N0q"/>
-                        <outletCollection property="section1TextFields" destination="e2Y-T1-vXE" collectionClass="NSMutableArray" id="Zsv-Ae-mgU"/>
-                        <outletCollection property="section1TextFields" destination="mMa-dd-cSh" collectionClass="NSMutableArray" id="c6Q-ea-rSU"/>
-                        <outletCollection property="systemsSwitches" destination="osP-Kf-PvP" collectionClass="NSMutableArray" id="yjf-TT-Mgp"/>
-                        <outletCollection property="systemsSwitches" destination="UbU-Jj-mbg" collectionClass="NSMutableArray" id="Dtd-sz-px9"/>
-                        <outletCollection property="systemsSwitches" destination="Pvw-kw-XkX" collectionClass="NSMutableArray" id="NO4-gl-7ar"/>
-                        <outletCollection property="systemsSwitches" destination="iMR-Nd-Qk0" collectionClass="NSMutableArray" id="Cgp-V6-lPu"/>
-                        <outletCollection property="systemsSwitches" destination="2Bq-fE-UOd" collectionClass="NSMutableArray" id="dX1-8X-ra0"/>
-                        <outletCollection property="systemsSwitches" destination="gLa-nc-yXK" collectionClass="NSMutableArray" id="D9r-aa-lfT"/>
-                        <outletCollection property="systemsSwitches" destination="hDi-Ea-aSa" collectionClass="NSMutableArray" id="Eid-pg-r64"/>
-                        <outletCollection property="systemsSwitches" destination="iEK-wv-97c" collectionClass="NSMutableArray" id="E04-OI-DrR"/>
-                        <outletCollection property="systemsSwitches" destination="xlX-ms-r3T" collectionClass="NSMutableArray" id="ATu-ut-rqa"/>
+                        <outletCollection property="allTextFields" destination="Omu-3K-015" collectionClass="NSMutableArray" id="QGx-3M-msu"/>
+                        <outletCollection property="allTextFields" destination="bPj-Ki-o7a" collectionClass="NSMutableArray" id="f3o-Dg-gz7"/>
+                        <outletCollection property="allTextFields" destination="r6o-Wy-Qnp" collectionClass="NSMutableArray" id="kMr-xT-TqK"/>
+                        <outletCollection property="allTextFields" destination="2E3-4e-Cwk" collectionClass="NSMutableArray" id="qvJ-Zc-iYM"/>
+                        <outletCollection property="allTextFields" destination="1fZ-nD-vfM" collectionClass="NSMutableArray" id="nSM-kv-nO6"/>
+                        <outletCollection property="allTextFields" destination="d4M-E9-y55" collectionClass="NSMutableArray" id="t7t-1E-G7w"/>
+                        <outletCollection property="allTextFields" destination="v0G-DV-Tkc" collectionClass="NSMutableArray" id="TGB-02-Xlk"/>
+                        <outletCollection property="allTextFields" destination="J0d-IH-BdV" collectionClass="NSMutableArray" id="j07-ou-dhd"/>
+                        <outletCollection property="allTextFields" destination="caP-8a-WVk" collectionClass="NSMutableArray" id="Tey-VW-q7Z"/>
+                        <outletCollection property="allTextFields" destination="ye2-a5-gzG" collectionClass="NSMutableArray" id="o44-OE-Ycs"/>
+                        <outletCollection property="allTextFields" destination="Qmp-cF-0Ua" collectionClass="NSMutableArray" id="Vft-Et-DP7"/>
+                        <outletCollection property="allTextFields" destination="Gxc-mE-FTR" collectionClass="NSMutableArray" id="cwf-ce-AlT"/>
+                        <outletCollection property="allTextFields" destination="Wr8-P1-dHa" collectionClass="NSMutableArray" id="hQf-II-K5s"/>
+                        <outletCollection property="allTextFields" destination="RwT-py-n6N" collectionClass="NSMutableArray" id="O6n-R7-VTC"/>
+                        <outletCollection property="allTextFields" destination="s9y-wk-fSc" collectionClass="NSMutableArray" id="Rd9-ji-N0q"/>
+                        <outletCollection property="allTextFields" destination="e2Y-T1-vXE" collectionClass="NSMutableArray" id="Zsv-Ae-mgU"/>
+                        <outletCollection property="allTextFields" destination="mMa-dd-cSh" collectionClass="NSMutableArray" id="c6Q-ea-rSU"/>
+                        <outletCollection property="section_1_Switches" destination="osP-Kf-PvP" collectionClass="NSMutableArray" id="yjf-TT-Mgp"/>
+                        <outletCollection property="section_1_Switches" destination="UbU-Jj-mbg" collectionClass="NSMutableArray" id="Dtd-sz-px9"/>
+                        <outletCollection property="section_1_Switches" destination="Pvw-kw-XkX" collectionClass="NSMutableArray" id="NO4-gl-7ar"/>
+                        <outletCollection property="section_1_Switches" destination="iMR-Nd-Qk0" collectionClass="NSMutableArray" id="Cgp-V6-lPu"/>
+                        <outletCollection property="section_1_Switches" destination="2Bq-fE-UOd" collectionClass="NSMutableArray" id="dX1-8X-ra0"/>
+                        <outletCollection property="section_1_Switches" destination="gLa-nc-yXK" collectionClass="NSMutableArray" id="D9r-aa-lfT"/>
+                        <outletCollection property="section_1_Switches" destination="hDi-Ea-aSa" collectionClass="NSMutableArray" id="Eid-pg-r64"/>
+                        <outletCollection property="section_1_Switches" destination="iEK-wv-97c" collectionClass="NSMutableArray" id="E04-OI-DrR"/>
+                        <outletCollection property="section_1_Switches" destination="xlX-ms-r3T" collectionClass="NSMutableArray" id="ATu-ut-rqa"/>
                         <outletCollection property="allSubViews" destination="qSS-L7-GSz" collectionClass="NSMutableArray" id="0Es-mZ-U58"/>
                         <outletCollection property="allSubViews" destination="8ud-m0-vlM" collectionClass="NSMutableArray" id="BHP-lf-bPA"/>
-                        <outletCollection property="section1TextFields" destination="7fe-1i-VwM" collectionClass="NSMutableArray" id="bXp-ab-eDL"/>
+                        <outletCollection property="allTextFields" destination="7fe-1i-VwM" collectionClass="NSMutableArray" id="bXp-ab-eDL"/>
                         <outletCollection property="allSubViews" destination="DiM-Eb-g3s" collectionClass="NSMutableArray" id="cPN-wk-2mf"/>
                         <outletCollection property="allSubViews" destination="08Y-cw-ljX" collectionClass="NSMutableArray" id="zXr-pd-QDI"/>
                         <outletCollection property="allSubViews" destination="vKT-hk-epZ" collectionClass="NSMutableArray" id="sKU-b9-tWf"/>
                         <outletCollection property="allSubViews" destination="RPD-6G-YbY" collectionClass="NSMutableArray" id="7oG-Ks-IMs"/>
-                        <outletCollection property="systemsSwitches" destination="81P-pl-g0M" collectionClass="NSMutableArray" id="K6c-r7-vbO"/>
-                        <outletCollection property="systemsSwitches" destination="mCP-Ue-3pg" collectionClass="NSMutableArray" id="roX-sN-UOR"/>
-                        <outletCollection property="systemsSwitches" destination="smU-cX-Jl7" collectionClass="NSMutableArray" id="8MI-2d-WF1"/>
-                        <outletCollection property="section1TextFields" destination="XE8-iZ-7j9" collectionClass="NSMutableArray" id="dXJ-Kp-lkC"/>
-                        <outletCollection property="section1TextFields" destination="H49-Fj-Mqq" collectionClass="NSMutableArray" id="mup-v2-aPu"/>
-                        <outletCollection property="section1TextFields" destination="8mF-0L-pje" collectionClass="NSMutableArray" id="dWr-mf-fDf"/>
-                        <outletCollection property="section1TextFields" destination="ZYF-MY-Uub" collectionClass="NSMutableArray" id="5q6-ov-CdV"/>
-                        <outletCollection property="section1TextFields" destination="WE0-fw-ct2" collectionClass="NSMutableArray" id="Kn0-jv-gwc"/>
-                        <outletCollection property="section1TextFields" destination="93Y-mV-hNg" collectionClass="NSMutableArray" id="n8C-bO-zv7"/>
-                        <outletCollection property="section1TextFields" destination="ClS-A4-Yb1" collectionClass="NSMutableArray" id="5qv-LG-Pw4"/>
-                        <outletCollection property="section1TextFields" destination="dxZ-cG-VEe" collectionClass="NSMutableArray" id="vnZ-VQ-dGW"/>
-                        <outletCollection property="section1TextFields" destination="Lgq-rI-6fg" collectionClass="NSMutableArray" id="g3n-l5-liz"/>
+                        <outletCollection property="allTextFields" destination="XE8-iZ-7j9" collectionClass="NSMutableArray" id="dXJ-Kp-lkC"/>
+                        <outletCollection property="allTextFields" destination="H49-Fj-Mqq" collectionClass="NSMutableArray" id="mup-v2-aPu"/>
+                        <outletCollection property="allTextFields" destination="8mF-0L-pje" collectionClass="NSMutableArray" id="dWr-mf-fDf"/>
+                        <outletCollection property="allTextFields" destination="ZYF-MY-Uub" collectionClass="NSMutableArray" id="5q6-ov-CdV"/>
+                        <outletCollection property="allTextFields" destination="WE0-fw-ct2" collectionClass="NSMutableArray" id="Kn0-jv-gwc"/>
+                        <outletCollection property="allTextFields" destination="ClS-A4-Yb1" collectionClass="NSMutableArray" id="5qv-LG-Pw4"/>
+                        <outletCollection property="allTextFields" destination="Lgq-rI-6fg" collectionClass="NSMutableArray" id="g3n-l5-liz"/>
                         <outletCollection property="buttonOutlets" destination="Kti-EM-SLv" collectionClass="NSMutableArray" id="vkr-AP-Mx4"/>
                         <outletCollection property="buttonOutlets" destination="W72-ZY-URB" collectionClass="NSMutableArray" id="WOX-PN-pSk"/>
                         <outletCollection property="buttonOutlets" destination="0QU-eK-SUo" collectionClass="NSMutableArray" id="efl-ZT-0p1"/>
@@ -1526,8 +1681,6 @@
                         <outletCollection property="fieldLabels" destination="QoU-5N-CMC" collectionClass="NSMutableArray" id="4kS-6u-SJB"/>
                         <outletCollection property="fieldLabels" destination="ShU-F3-Fky" collectionClass="NSMutableArray" id="dHc-jF-bQ8"/>
                         <outletCollection property="fieldLabels" destination="iJO-vZ-LWl" collectionClass="NSMutableArray" id="oud-wF-O3b"/>
-                        <outletCollection property="fieldLabels" destination="uda-9l-pHo" collectionClass="NSMutableArray" id="rlS-cu-hub"/>
-                        <outletCollection property="fieldLabels" destination="Abe-a8-klP" collectionClass="NSMutableArray" id="tp9-Ny-911"/>
                         <outletCollection property="fieldLabels" destination="gyy-9k-Atx" collectionClass="NSMutableArray" id="sIa-pj-c4T"/>
                         <outletCollection property="fieldLabels" destination="tfF-jC-fWF" collectionClass="NSMutableArray" id="hMY-cz-X4U"/>
                         <outletCollection property="allTextFields" destination="Omu-3K-015" collectionClass="NSMutableArray" id="yjb-Dh-CVc"/>
@@ -1553,9 +1706,7 @@
                         <outletCollection property="allTextFields" destination="8mF-0L-pje" collectionClass="NSMutableArray" id="bqX-bx-q4W"/>
                         <outletCollection property="allTextFields" destination="ZYF-MY-Uub" collectionClass="NSMutableArray" id="ZPs-7a-j9h"/>
                         <outletCollection property="allTextFields" destination="WE0-fw-ct2" collectionClass="NSMutableArray" id="6v1-Cg-jen"/>
-                        <outletCollection property="allTextFields" destination="93Y-mV-hNg" collectionClass="NSMutableArray" id="kRq-iK-DhA"/>
                         <outletCollection property="allTextFields" destination="ClS-A4-Yb1" collectionClass="NSMutableArray" id="1oJ-WY-q2d"/>
-                        <outletCollection property="allTextFields" destination="dxZ-cG-VEe" collectionClass="NSMutableArray" id="leg-1K-uPB"/>
                         <outletCollection property="allTextFields" destination="Lgq-rI-6fg" collectionClass="NSMutableArray" id="uVn-mi-OmN"/>
                         <outletCollection property="allSubViews" destination="cq9-aw-ifm" collectionClass="NSMutableArray" id="BYK-h3-fOy"/>
                         <outletCollection property="buttonOutlets" destination="NH4-IZ-37I" collectionClass="NSMutableArray" id="BZ5-A8-cvc"/>
@@ -1566,9 +1717,34 @@
                         <outletCollection property="allPickerTextFields" destination="H49-Fj-Mqq" collectionClass="NSMutableArray" id="UnZ-bf-kQP"/>
                         <outletCollection property="allPickerTextFields" destination="8mF-0L-pje" collectionClass="NSMutableArray" id="ybW-Ai-g8w"/>
                         <outletCollection property="allPickerTextFields" destination="WE0-fw-ct2" collectionClass="NSMutableArray" id="oLa-qq-91P"/>
-                        <outletCollection property="allPickerTextFields" destination="93Y-mV-hNg" collectionClass="NSMutableArray" id="CE9-91-Tj8"/>
                         <outletCollection property="allPickerTextFields" destination="ClS-A4-Yb1" collectionClass="NSMutableArray" id="Fxk-LE-hun"/>
+                        <outletCollection property="section_3_Switches" destination="81P-pl-g0M" collectionClass="NSMutableArray" id="VDa-Zm-4wj"/>
+                        <outletCollection property="section_3_Switches" destination="mCP-Ue-3pg" collectionClass="NSMutableArray" id="8wX-ma-oRD"/>
+                        <outletCollection property="section_3_Switches" destination="smU-cX-Jl7" collectionClass="NSMutableArray" id="jdn-OM-aUe"/>
+                        <outletCollection property="allSwitches" destination="osP-Kf-PvP" collectionClass="NSMutableArray" id="gaH-oD-jkJ"/>
+                        <outletCollection property="allSwitches" destination="iMR-Nd-Qk0" collectionClass="NSMutableArray" id="CSN-qr-8j8"/>
+                        <outletCollection property="allSwitches" destination="hDi-Ea-aSa" collectionClass="NSMutableArray" id="dpe-EX-YNG"/>
+                        <outletCollection property="allSwitches" destination="UbU-Jj-mbg" collectionClass="NSMutableArray" id="Llr-F4-ZyM"/>
+                        <outletCollection property="allSwitches" destination="2Bq-fE-UOd" collectionClass="NSMutableArray" id="cl6-hh-vaD"/>
+                        <outletCollection property="allSwitches" destination="iEK-wv-97c" collectionClass="NSMutableArray" id="0A0-h8-glU"/>
+                        <outletCollection property="allSwitches" destination="Pvw-kw-XkX" collectionClass="NSMutableArray" id="Z01-9o-n3q"/>
+                        <outletCollection property="allSwitches" destination="gLa-nc-yXK" collectionClass="NSMutableArray" id="gfF-yZ-stp"/>
+                        <outletCollection property="allSwitches" destination="xlX-ms-r3T" collectionClass="NSMutableArray" id="8DX-cG-pFd"/>
+                        <outletCollection property="allSwitches" destination="81P-pl-g0M" collectionClass="NSMutableArray" id="Rio-CP-Gj1"/>
+                        <outletCollection property="allSwitches" destination="mCP-Ue-3pg" collectionClass="NSMutableArray" id="J2T-tk-B99"/>
+                        <outletCollection property="allSwitches" destination="smU-cX-Jl7" collectionClass="NSMutableArray" id="psF-X3-ywU"/>
+                        <outletCollection property="section_3_Switches" destination="wF4-r8-uuZ" collectionClass="NSMutableArray" id="KCz-GF-c84"/>
+                        <outletCollection property="allSwitches" destination="wF4-r8-uuZ" collectionClass="NSMutableArray" id="p9i-6h-WWW"/>
+                        <outletCollection property="fieldLabels" destination="HwT-qD-Gol" collectionClass="NSMutableArray" id="jKL-nN-9gx"/>
+                        <outletCollection property="fieldLabels" destination="AG0-Ly-smJ" collectionClass="NSMutableArray" id="42M-q4-wpP"/>
+                        <outletCollection property="allTextFields" destination="AM6-C6-1aD" collectionClass="NSMutableArray" id="Abm-vh-Ygk"/>
+                        <outletCollection property="allTextFields" destination="mud-yf-m81" collectionClass="NSMutableArray" id="3nb-mx-GYX"/>
+                        <outletCollection property="allPickerTextFields" destination="AM6-C6-1aD" collectionClass="NSMutableArray" id="8lV-Q7-R85"/>
+                        <outletCollection property="allPickerTextFields" destination="mud-yf-m81" collectionClass="NSMutableArray" id="ytY-Eb-OzQ"/>
+                        <outletCollection property="fieldLabels" destination="Abe-a8-klP" collectionClass="NSMutableArray" id="tp9-Ny-911"/>
+                        <outletCollection property="allTextFields" destination="dxZ-cG-VEe" collectionClass="NSMutableArray" id="vnZ-VQ-dGW"/>
                         <outletCollection property="allPickerTextFields" destination="dxZ-cG-VEe" collectionClass="NSMutableArray" id="10H-nl-kQw"/>
+                        <outletCollection property="allTextFields" destination="dxZ-cG-VEe" collectionClass="NSMutableArray" id="leg-1K-uPB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

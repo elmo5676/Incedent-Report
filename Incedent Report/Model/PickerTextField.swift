@@ -42,7 +42,8 @@ class PickerTextField: UITextField, UIPickerViewDelegate, UIPickerViewDataSource
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         self.text = selectionItems[row]
-//        self.resignFirstResponder()
+        self.resignFirstResponder()
+        self.delegate?.textFieldDidEndEditing?(self)
     }
     
 }

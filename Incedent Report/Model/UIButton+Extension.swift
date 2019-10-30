@@ -82,25 +82,4 @@ extension UIButton {
 }
 
 
-//public extension Array where Element: UIButton {
-//    func colorScheme_Standard() {
-//        for element in self {
-//            element.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
-//            element.titleLabel?.textColor = #colorLiteral(red: 0.2771260142, green: 0.3437626958, blue: 0.4359292388, alpha: 1)
-//            element.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-//            //element.layer.borderWidth = 0.0
-//            element.layer.cornerRadius = CGFloat(corner)
-//        }
-//    }
-//    func colorScheme_Dark() {
-//        for element in self {
-//            element.backgroundColor = #colorLiteral(red: 0.2771260142, green: 0.3437626958, blue: 0.4359292388, alpha: 1)
-//            element.titleLabel?.textColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
-//            element.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-//            //element.layer.borderWidth = 0.0
-//            element.layer.cornerRadius = CGFloat(corner)
-//        }
-//    }
-//}
-
 

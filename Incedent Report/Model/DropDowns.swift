@@ -11,6 +11,16 @@ import Foundation
 
 struct DropDowns {
     
+    let rank                = [" ", "COL", "LTCOL", "MAJ", "CAPT", "1LT", "2LT", "CMSGT", "SMGT", "MSGT", "TSGT", "SSGT", "SRA", "A1C", "AMN", "AB"]
+    
+    let heading: [String]   = {
+        var headings: [String] = []
+        for i in 1...360 {
+            headings.append("\(String(i))°")
+        }
+        return headings
+    }()
+    
     let unit                = [" ", "1 RS", "99 RS", "99 ERS", "5 RS", "1 ERS"]
     
     let aircraftType        = [" ", "T-38", "U-2", "TU-2"]
