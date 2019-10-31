@@ -16,6 +16,7 @@
 		52098FC3235688C2005A4C80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52098FC1235688C2005A4C80 /* LaunchScreen.storyboard */; };
 		52098FCE23573E78005A4C80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52098FCD23573E78005A4C80 /* Assets.xcassets */; };
 		526BEB9E235A25C300B87D55 /* DropDowns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526BEB9D235A25C300B87D55 /* DropDowns.swift */; };
+		52708B30236B7E1A009797A7 /* Incedent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52708B2F236B7E1A009797A7 /* Incedent.swift */; };
 		527A6D192360DA4B00735C6D /* PickerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527A6D182360DA4B00735C6D /* PickerTextField.swift */; };
 		52B21CB2235A7D38005B3DBA /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B21CB1235A7D38005B3DBA /* UIButton+Extension.swift */; };
 		52B21CB4235A8649005B3DBA /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B21CB3235A8649005B3DBA /* UIViewController+Extension.swift */; };
@@ -34,6 +35,7 @@
 		52098FC4235688C2005A4C80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52098FCD23573E78005A4C80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		526BEB9D235A25C300B87D55 /* DropDowns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDowns.swift; sourceTree = "<group>"; };
+		52708B2F236B7E1A009797A7 /* Incedent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Incedent.swift; sourceTree = "<group>"; };
 		527A6D182360DA4B00735C6D /* PickerTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerTextField.swift; sourceTree = "<group>"; };
 		52B21CB1235A7D38005B3DBA /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		52B21CB3235A8649005B3DBA /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				52B21CB5235A86B1005B3DBA /* Double+Extension.swift */,
 				527A6D182360DA4B00735C6D /* PickerTextField.swift */,
 				520271992361203C0091DE62 /* BlueView.swift */,
+				52708B2F236B7E1A009797A7 /* Incedent.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 				52098FB6235688C0005A4C80 /* SceneDelegate.swift in Sources */,
 				52B21CB2235A7D38005B3DBA /* UIButton+Extension.swift in Sources */,
 				527A6D192360DA4B00735C6D /* PickerTextField.swift in Sources */,
+				52708B30236B7E1A009797A7 /* Incedent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
