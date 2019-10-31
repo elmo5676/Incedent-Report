@@ -43,5 +43,9 @@ struct DropDowns {
     
     let wildlifeSize        = [" ", "UNKNOWN", "SMALL", "MEDIUM", "LARGE"]
     
+    let shutDownLoc         = [" ", "PARKING","TAXI WAY","RUNWAY"]
+    
+//    let shutDownLoc         = [" ", "<#here#>","<#here#>","<#here#>","<#here#>","<#here#>","<#here#>","<#here#>","<#here#>"]
+    
     
 }
