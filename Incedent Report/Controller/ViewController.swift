@@ -25,6 +25,7 @@
 //Header:       1371.5
 
 import UIKit
+import AWSAppSync
 
 class ViewController: UIViewController, UITextFieldDelegate {
     
@@ -32,6 +33,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         initialSetup()
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appSyncClient = appDelegate.appSyncClient
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -42,28 +45,29 @@ class ViewController: UIViewController, UITextFieldDelegate {
     var textFieldDelegate: UITextFieldDelegate?
     var dd = DropDowns()
     var activeTextField = 0
+    var appSyncClient: AWSAppSyncClient?
     
     // MARK: - Form Fields
     //Section 1
     var dateV                       = Date()
-    var lastNameV                   = ""
-    var firstNameV                  = ""
-    var middleNameV                 = ""
-    var rankV                       = ""
-    var unitV                       = ""
-    var phoneNumberV                = ""
-    var phaseOfFlightV              = ""
-    var headingV                    = ""
-    var airspeedV                   = ""
-    var altitudeV                   = ""
+    var lastNameV                   = "BLANK"
+    var firstNameV                  = "BLANK"
+    var middleNameV                 = "BLANK"
+    var rankV                       = "BLANK"
+    var unitV                       = "BLANK"
+    var phoneNumberV                = "BLANK"
+    var phaseOfFlightV              = "BLANK"
+    var headingV                    = "BLANK"
+    var airspeedV                   = "BLANK"
+    var altitudeV                   = "BLANK"
     var altTypeV                    = "MSL"
-    var callSignV                   = ""
-    var aircraftTypeV               = ""
-    var tailNumberV                 = ""
-    var sortieDurationHrsV          = ""
-    var sortieDurationDecHrsV       = ""
-    var locationV                   = ""
-    var non9RWV                     = ""
+    var callSignV                   = "BLANK"
+    var aircraftTypeV               = "BLANK"
+    var tailNumberV                 = "BLANK"
+    var sortieDurationHrsV          = "BLANK"
+    var sortieDurationDecHrsV       = "BLANK"
+    var locationV                   = "BLANK"
+    var non9RWV                     = "BLANK"
     var siElectricalV               = false
     var siFlightControlsV           = false
     var siHydraulicV                = false
@@ -73,22 +77,22 @@ class ViewController: UIViewController, UITextFieldDelegate {
     var siEnviroPressureV           = false
     var siGearBrakesV               = false
     var siPayloadV                  = false
-    var sect_1_OtherV               = ""
+    var sect_1_OtherV               = "BLANK"
 
     //Section 2
-    var lightingConditionsV         = ""
-    var icingConditionsV            = ""
-    var turbulanceV                 = ""
-    var windsV                      = ""
-    var visibilityV                 = ""
+    var lightingConditionsV         = "BLANK"
+    var icingConditionsV            = "BLANK"
+    var turbulanceV                 = "BLANK"
+    var windsV                      = "BLANK"
+    var visibilityV                 = "BLANK"
     
     //Section 3
-    var birdWatchCondV              = ""
-    var birdConStepV                = ""
-    var birdConIncedentV            = ""
-    var numberOfBirdsV              = ""
-    var wildLifeSizeV               = ""
-    var airCraftImpactV             = ""
+    var birdWatchCondV              = "BLANK"
+    var birdConStepV                = "BLANK"
+    var birdConIncedentV            = "BLANK"
+    var numberOfBirdsV              = "BLANK"
+    var wildLifeSizeV               = "BLANK"
+    var airCraftImpactV             = "BLANK"
     
     var birdManDoingDutyV           = false { didSet {
         updateIndicatorLabel(birdManYorNLabel, with: birdManDoingDutyV)
@@ -104,9 +108,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }}
     
     //Section 4
-    var descriptionFreeTextV        = ""
-    var checklistsRanV              = ""
-    var feedBackV                   = ""
+    var descriptionFreeTextV        = "BLANK"
+    var checklistsRanV              = "BLANK"
+    var feedBackV                   = "BLANK"
     
     //Section 5
     var emergencyDeclaredV          = false { didSet {
@@ -116,7 +120,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         updateIndicatorLabel(shutDownYNLabel, with: shutDownV)
         hideShutDownLocItems(shutDownV)
         }}
-    var shutDownLocV                = ""
+    var shutDownLocV                = "BLANK"
     
     // MARK: - All
     @IBOutlet var allSubViews: [UIView]!
@@ -182,58 +186,58 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     //TEXTFIELDS
     @IBAction func lastNameTF(_ sender: UITextField) {
-        lastNameV = sender.text ?? ""
+        lastNameV = sender.text ?? "BLANK"
     }
     @IBAction func firstNameTF(_ sender: UITextField) {
-        firstNameV = sender.text ?? ""
+        firstNameV = sender.text ?? "BLANK"
     }
     @IBAction func middleNameTF(_ sender: UITextField) {
-        middleNameV = sender.text ?? ""
+        middleNameV = sender.text ?? "BLANK"
     }
     @IBAction func rankTF(_ sender: UITextField) {
-        rankV = sender.text ?? ""
+        rankV = sender.text ?? "BLANK"
     }
     @IBAction func unitTF(_ sender: UITextField) {
-        unitV = sender.text ?? ""
+        unitV = sender.text ?? "BLANK"
     }
     @IBAction func phoneNumberTF(_ sender: UITextField) {
-        phoneNumberV = sender.text ?? ""
+        phoneNumberV = sender.text ?? "BLANK"
     }
     @IBAction func phaseOfFlightTF(_ sender: UITextField) {
-        phaseOfFlightV = sender.text ?? ""
+        phaseOfFlightV = sender.text ?? "BLANK"
     }
     @IBAction func headingTF(_ sender: UITextField) {
-        headingV = sender.text ?? ""
+        headingV = sender.text ?? "BLANK"
     }
     @IBAction func airspeedTF(_ sender: UITextField) {
-        airspeedV = sender.text ?? ""
+        airspeedV = sender.text ?? "BLANK"
     }
     @IBAction func altitudeTF(_ sender: UITextField) {
-        altitudeV = sender.text ?? ""
+        altitudeV = sender.text ?? "BLANK"
     }
     @IBAction func callSignTF(_ sender: UITextField) {
-        callSignV = sender.text ?? ""
+        callSignV = sender.text ?? "BLANK"
     }
     @IBAction func airCraftTypeTF(_ sender: UITextField) {
-        aircraftTypeV = sender.text ?? ""
+        aircraftTypeV = sender.text ?? "BLANK"
     }
     @IBAction func tailNumberTF(_ sender: UITextField) {
-        tailNumberV = sender.text ?? ""
+        tailNumberV = sender.text ?? "BLANK"
     }
     @IBAction func sortieDurationHrsTF(_ sender: UITextField) {
-        sortieDurationHrsV = sender.text ?? ""
+        sortieDurationHrsV = sender.text ?? "BLANK"
     }
     @IBAction func sortieDurationDecHrsTF(_ sender: UITextField) {
-        sortieDurationDecHrsV = sender.text ?? ""
+        sortieDurationDecHrsV = sender.text ?? "BLANK"
     }
     @IBAction func locationTF(_ sender: UITextField) {
-        locationV = sender.text ?? ""
+        locationV = sender.text ?? "BLANK"
     }
     @IBAction func non9RWTF(_ sender: UITextField) {
-        non9RWV = sender.text ?? ""
+        non9RWV = sender.text ?? "BLANK"
     }
     @IBAction func section1OtherTF(_ sender: UITextField) {
-        sect_1_OtherV = sender.text ?? ""
+        sect_1_OtherV = sender.text ?? "BLANK"
     }
     
     //SYSTEM SWITCHES
@@ -293,19 +297,19 @@ class ViewController: UIViewController, UITextFieldDelegate {
         clearSection2()
     }
     @IBAction func lightingConditionsTF(_ sender: UITextField) {
-        lightingConditionsV = sender.text ?? ""
+        lightingConditionsV = sender.text ?? "BLANK"
     }
     @IBAction func icingConditionsTF(_ sender: UITextField) {
-        icingConditionsV = sender.text ?? ""
+        icingConditionsV = sender.text ?? "BLANK"
     }
     @IBAction func turbulanceTF(_ sender: UITextField) {
-        turbulanceV = sender.text ?? ""
+        turbulanceV = sender.text ?? "BLANK"
     }
     @IBAction func windsTF(_ sender: UITextField) {
-        windsV = sender.text ?? ""
+        windsV = sender.text ?? "BLANK"
     }
     @IBAction func visibilityTF(_ sender: UITextField) {
-        visibilityV = sender.text ?? ""
+        visibilityV = sender.text ?? "BLANK"
     }
     
     // MARK: - SECTION III.  FOR BIRD/WILDLIFE STRIKES
@@ -330,16 +334,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
         clearSection3()
     }
     @IBAction func birdWatchConditionTF(_ sender: UITextField) {
-        birdWatchCondV = sender.text ?? ""
+        birdWatchCondV = sender.text ?? "BLANK"
     }
     @IBAction func numberOfBirdsTF(_ sender: UITextField) {
-        numberOfBirdsV = sender.text ?? ""
+        numberOfBirdsV = sender.text ?? "BLANK"
     }
     @IBAction func wildLifeSizeTF(_ sender: UITextField) {
-        wildLifeSizeV = sender.text ?? ""
+        wildLifeSizeV = sender.text ?? "BLANK"
     }
     @IBAction func impactPointsTF(_ sender: UITextField) {
-        airCraftImpactV = sender.text ?? ""
+        airCraftImpactV = sender.text ?? "BLANK"
     }
     @IBAction func birdManswitch(_ sender: UISwitch) {
         birdManDoingDutyV = sender.isOn
@@ -382,7 +386,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         shutDownV = sender.isOn
     }
     @IBAction func shutDownLocDropDown(_ sender: UITextField) {
-        shutDownLocV = sender.text ?? ""
+        shutDownLocV = sender.text ?? "BLANK"
     }
     
     @IBAction func clearSection5(_ sender: UIButton) {
@@ -394,7 +398,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var submitFormButtonOutlet: UIButton!
     @IBAction func submitFormButton(_ sender: UIButton) {
         submitFormButtonOutlet.showPressed()
-        submitForm()
+        let ni = createNewIncedent()
+        runMutation(incedent: ni)
     }
     
     // MARK: - Functionality
@@ -547,25 +552,25 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     func clearSection1(){
     dateV                                       = Date()
-    lastNameV 	                                = ""
-    firstNameV                                  = ""
-    middleNameV                                 = ""
-    rankV                                       = ""
-    unitV 	                                    = ""
-    phoneNumberV                                = ""
-    phaseOfFlightV                              = ""
-    headingV                                    = ""
-    airspeedV                                   = ""
-    altitudeV                                   = ""
+    lastNameV 	                                = "BLANK"
+    firstNameV                                  = "BLANK"
+    middleNameV                                 = "BLANK"
+    rankV                                       = "BLANK"
+    unitV 	                                    = "BLANK"
+    phoneNumberV                                = "BLANK"
+    phaseOfFlightV                              = "BLANK"
+    headingV                                    = "BLANK"
+    airspeedV                                   = "BLANK"
+    altitudeV                                   = "BLANK"
     altTypeV                                    = "MSL"
-    callSignV                                   = ""
-    aircraftTypeV                               = ""
-    tailNumberV                                 = ""
-    sortieDurationHrsV                          = ""
-    sortieDurationDecHrsV                       = ""
-    locationV                                   = ""
-    non9RWV                                     = ""
-    sect_1_OtherV                               = ""
+    callSignV                                   = "BLANK"
+    aircraftTypeV                               = "BLANK"
+    tailNumberV                                 = "BLANK"
+    sortieDurationHrsV                          = "BLANK"
+    sortieDurationDecHrsV                       = "BLANK"
+    locationV                                   = "BLANK"
+    non9RWV                                     = "BLANK"
+    sect_1_OtherV                               = "BLANK"
     siElectricalV                               = false
     siFlightControlsV                           = false
     siHydraulicV                                = false
@@ -586,21 +591,21 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }}
     
     func clearSection2() {
-    lightingConditionsV     = ""
-    icingConditionsV        = ""
-    turbulanceV             = ""
-    windsV                  = ""
-    visibilityV             = ""
+    lightingConditionsV     = "BLANK"
+    icingConditionsV        = "BLANK"
+    turbulanceV             = "BLANK"
+    windsV                  = "BLANK"
+    visibilityV             = "BLANK"
     for tf in section2TextFields {
         tf.text?.removeAll()
         section2TextFields[0].becomeFirstResponder()
     }}
     
     func clearSection3() {
-    birdWatchCondV              = ""
-    numberOfBirdsV              = ""
-    wildLifeSizeV               = ""
-    airCraftImpactV             = ""
+    birdWatchCondV              = "BLANK"
+    numberOfBirdsV              = "BLANK"
+    wildLifeSizeV               = "BLANK"
+    airCraftImpactV             = "BLANK"
     birdManDoingDutyV           = false
     sofAtcWarningV              = false
     aircraftLandingLightOnV     = false
@@ -614,9 +619,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }}
     
     func clearSection4() {
-        incedentDescriptionTextViewOutlet.text  = ""
-        checklistsRanTextViewOutlet.text        = ""
-        feedBackTextViewOutlet.text             = ""
+        incedentDescriptionTextViewOutlet.text  = "BLANK"
+        checklistsRanTextViewOutlet.text        = "BLANK"
+        feedBackTextViewOutlet.text             = "BLANK"
     }
     
     func clearSection5() {
@@ -625,7 +630,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
         emergencyDeclaredV  = false
         shutDownV           = false
-        shutDownLocV        = ""
+        shutDownLocV        = "BLANK"
     }
     
     func resetAll() {
@@ -658,22 +663,99 @@ class ViewController: UIViewController, UITextFieldDelegate {
         section5TextFields = [shutDownDropdown]
     }
     
-    func submitForm() {
+    func createNewIncedent() -> Incedent {
         let uuid = UUID()
-        self.descriptionFreeTextV = incedentDescriptionTextViewOutlet.text
-        self.checklistsRanV = checklistsRanTextViewOutlet.text
-        self.feedBackV = feedBackTextViewOutlet.text
+        
+        if incedentDescriptionTextViewOutlet.text != "" { self.descriptionFreeTextV = incedentDescriptionTextViewOutlet.text } else { self.descriptionFreeTextV = "BLANK" }
+        if checklistsRanTextViewOutlet.text != "" { self.checklistsRanV = checklistsRanTextViewOutlet.text } else { self.checklistsRanV = "BLANK" }
+        if feedBackTextViewOutlet.text != "" { self.feedBackV = feedBackTextViewOutlet.text } else { self.feedBackV = "BLANK" }
+        
         let newIncedent = Incedent(uuidV: uuid, dateV: dateV, lastNameV: lastNameV, firstNameV: firstNameV, middleNameV: middleNameV, rankV: rankV, unitV: unitV, phoneNumberV: phoneNumberV, phaseOfFlightV: phaseOfFlightV, headingV: headingV, airspeedV: airspeedV, altitudeV: altitudeV, altTypeV: altTypeV, callSignV: callSignV, aircraftTypeV: aircraftTypeV, tailNumberV: tailNumberV, sortieDurationHrsV: sortieDurationHrsV, sortieDurationDecHrsV: sortieDurationDecHrsV,locationV: locationV, non9RWV: non9RWV, siElectricalV: siElectricalV, siFlightControlsV: siFlightControlsV, siHydraulicV: siHydraulicV, siEngineV: siEngineV, siFuelV: siFuelV, siInstrumentationV: siInstrumentationV, siEnviroPressureV: siEnviroPressureV, siGearBrakesV: siGearBrakesV, siPayloadV: siPayloadV, sect_1_OtherV: sect_1_OtherV, lightingConditionsV: lightingConditionsV, icingConditionsV: icingConditionsV, turbulanceV: turbulanceV, windsV: windsV, visibilityV: visibilityV, birdConStepV: birdConStepV, birdConIncedentV: birdConIncedentV, numberOfBirdsV: numberOfBirdsV, wildLifeSizeV: wildLifeSizeV, airCraftImpactV: airCraftImpactV, birdManDoingDutyV: birdManDoingDutyV, sofAtcWarningV: sofAtcWarningV, aircraftLandingLightOnV: aircraftLandingLightOnV, pilotWarningPriorToImpactV: pilotWarningPriorToImpactV, descriptionFreeTextV: descriptionFreeTextV, checklistsRanV: checklistsRanV, feedBackV: feedBackV, emergencyDeclaredV: emergencyDeclaredV, shutDownV: shutDownV, shutDownLocationV: shutDownLocV)
         
         print("************************************")
         let printable = Mirror(reflecting: newIncedent).children
         for child in printable {
-            guard let lab = child.label else { return }
+            guard let lab = child.label else { return newIncedent}
             print("\(lab) : \(child.value)")
         }
         print("************************************")
         
+        return newIncedent
     }
+    
+    
+    // MARK: - AWS Shiza
+    func runMutation(incedent: Incedent){
+        let i = incedent
+        let uniqueID = String(describing: i.uuidV)
+        let date = String(describing: i.dateV)
+
+        let mutationInput = CreateIncedentInput(uuid: uniqueID,
+                                                date: date,
+                                                lastName: i.lastNameV,
+                                                firstName: i.firstNameV,
+                                                middleName: i.middleNameV,
+                                                rank: i.rankV,
+                                                unit: i.unitV,
+                                                phoneNumber: i.phoneNumberV,
+                                                phaseOfFlight: i.phaseOfFlightV,
+                                                heading: i.headingV,
+                                                airspeed: i.airspeedV,
+                                                altitude: i.altitudeV,
+                                                altType: i.altTypeV,
+                                                callSign: i.callSignV,
+                                                aircraftType: i.aircraftTypeV,
+                                                tailNumber: i.tailNumberV,
+                                                sortieDurationHrs: i.sortieDurationHrsV,
+                                                sortieDurationDecHrs: i.sortieDurationDecHrsV,
+                                                location: i.locationV,
+                                                non9Rw: i.non9RWV,
+                                                siElectrical: i.siElectricalV,
+                                                siFlightControls: i.siFlightControlsV,
+                                                siHydraulic: i.siHydraulicV,
+                                                siEngine: i.siEngineV,
+                                                siFuel: i.siFuelV,
+                                                siInstrumentation: i.siInstrumentationV,
+                                                siEniroPressure: i.siEnviroPressureV,
+                                                siGearBrakes: i.siGearBrakesV,
+                                                siPayload: i.siPayloadV,
+                                                sect_1Other: i.sect_1_OtherV,
+                                                lightingConditions: i.lightingConditionsV,
+                                                icingConditions: i.icingConditionsV,
+                                                turbulance: i.turbulanceV,
+                                                winds: i.windsV,
+                                                isibility: i.visibilityV,
+                                                birdConStep: i.birdConStepV,
+                                                birdConIncedent: i.birdConIncedentV,
+                                                numberOfBirds: i.numberOfBirdsV,
+                                                wildLifeSize: i.wildLifeSizeV,
+                                                airCraftImpact: i.airCraftImpactV,
+                                                birdManDoingDuty: i.birdManDoingDutyV,
+                                                sofAtcWarning: i.sofAtcWarningV,
+                                                aircraftLandingLightOn: i.aircraftLandingLightOnV,
+                                                pilotWarningPriorToImpact: i.pilotWarningPriorToImpactV,
+                                                descriptionFreeText: i.descriptionFreeTextV,
+                                                checklistsRan: i.checklistsRanV,
+                                                feedBack: i.feedBackV,
+                                                emergencyDeclared: i.emergencyDeclaredV,
+                                                shutDown: i.shutDownV,
+                                                shutDownLocation: i.shutDownLocationV)
+        
+        appSyncClient?.perform(mutation: CreateIncedentMutation(input: mutationInput)) { (result, error) in
+            if let error = error as? AWSAppSyncClientError {
+                print("Error occurred: \(error.localizedDescription )")
+            }
+            if let resultError = result?.errors {
+                print("Error saving the item on server: \(resultError)")
+                return
+            }
+            print("Mutation complete.")
+        }}
+    
+    
+    
+    
+
     
 }
 
