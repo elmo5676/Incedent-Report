@@ -18,12 +18,14 @@
 		52098FCE23573E78005A4C80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52098FCD23573E78005A4C80 /* Assets.xcassets */; };
 		52325C482370D7300057BA4B /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 52325C472370D7300057BA4B /* awsconfiguration.json */; };
 		52325C4A2370DBB30057BA4B /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52325C492370DBB30057BA4B /* API.swift */; };
+		5263EFD623721E070066EBA6 /* IncedentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5263EFD523721E070066EBA6 /* IncedentCell.swift */; };
 		526BEB9E235A25C300B87D55 /* DropDowns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526BEB9D235A25C300B87D55 /* DropDowns.swift */; };
 		52708B30236B7E1A009797A7 /* Incedent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52708B2F236B7E1A009797A7 /* Incedent.swift */; };
 		527A6D192360DA4B00735C6D /* PickerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527A6D182360DA4B00735C6D /* PickerTextField.swift */; };
 		52B21CB2235A7D38005B3DBA /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B21CB1235A7D38005B3DBA /* UIButton+Extension.swift */; };
 		52B21CB4235A8649005B3DBA /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B21CB3235A8649005B3DBA /* UIViewController+Extension.swift */; };
 		52B21CB6235A86B1005B3DBA /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B21CB5235A86B1005B3DBA /* Double+Extension.swift */; };
+		52B36C802373CE0200D048E5 /* ConfirmationWBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B36C7F2373CE0200D048E5 /* ConfirmationWBViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,12 +43,14 @@
 		52098FCD23573E78005A4C80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52325C472370D7300057BA4B /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
 		52325C492370DBB30057BA4B /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		5263EFD523721E070066EBA6 /* IncedentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncedentCell.swift; sourceTree = "<group>"; };
 		526BEB9D235A25C300B87D55 /* DropDowns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDowns.swift; sourceTree = "<group>"; };
 		52708B2F236B7E1A009797A7 /* Incedent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Incedent.swift; sourceTree = "<group>"; };
 		527A6D182360DA4B00735C6D /* PickerTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerTextField.swift; sourceTree = "<group>"; };
 		52B21CB1235A7D38005B3DBA /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		52B21CB3235A8649005B3DBA /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		52B21CB5235A86B1005B3DBA /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
+		52B36C7F2373CE0200D048E5 /* ConfirmationWBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationWBViewController.swift; sourceTree = "<group>"; };
 		79BC65E8D39929D541AB23C3 /* Pods_Incedent_Report.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Incedent_Report.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -109,6 +113,8 @@
 			isa = PBXGroup;
 			children = (
 				52098FB7235688C0005A4C80 /* ViewController.swift */,
+				5263EFD523721E070066EBA6 /* IncedentCell.swift */,
+				52B36C7F2373CE0200D048E5 /* ConfirmationWBViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -283,11 +289,13 @@
 				526BEB9E235A25C300B87D55 /* DropDowns.swift in Sources */,
 				5202719A2361203C0091DE62 /* BlueView.swift in Sources */,
 				52B21CB6235A86B1005B3DBA /* Double+Extension.swift in Sources */,
+				52B36C802373CE0200D048E5 /* ConfirmationWBViewController.swift in Sources */,
 				52B21CB4235A8649005B3DBA /* UIViewController+Extension.swift in Sources */,
 				52098FB6235688C0005A4C80 /* SceneDelegate.swift in Sources */,
 				52B21CB2235A7D38005B3DBA /* UIButton+Extension.swift in Sources */,
 				527A6D192360DA4B00735C6D /* PickerTextField.swift in Sources */,
 				52325C4A2370DBB30057BA4B /* API.swift in Sources */,
+				5263EFD623721E070066EBA6 /* IncedentCell.swift in Sources */,
 				52708B30236B7E1A009797A7 /* Incedent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

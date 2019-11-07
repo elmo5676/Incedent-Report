@@ -12,10 +12,9 @@ import UIKit
 struct Incedent {
     var uuidV: UUID
     var dateV: Date
-    var lastNameV: String
-    var firstNameV: String
-    var middleNameV: String
+    var nameV: String
     var rankV: String
+    var emailV: String
     var unitV: String
     var phoneNumberV: String
     var phaseOfFlightV: String
@@ -63,10 +62,9 @@ struct Incedent {
     
     init(uuidV: UUID,
         dateV: Date?,
-         lastNameV: String?,
-         firstNameV: String?,
-         middleNameV: String?,
+         nameV: String?,
          rankV: String?,
+         emailV: String?,
          unitV: String?,
          phoneNumberV: String?,
          phaseOfFlightV: String?,
@@ -113,10 +111,9 @@ struct Incedent {
          shutDownLocationV: String?) {
         self.uuidV = uuidV
         self.dateV = dateV ?? Date()
-        self.lastNameV = lastNameV ?? ""
-        self.firstNameV = firstNameV ?? ""
-        self.middleNameV = middleNameV ?? ""
+        self.nameV = nameV ?? ""
         self.rankV = rankV ?? ""
+        self.emailV = emailV ?? ""
         self.unitV = unitV ?? ""
         self.phoneNumberV = phoneNumberV ?? ""
         self.phaseOfFlightV = phaseOfFlightV ?? ""
